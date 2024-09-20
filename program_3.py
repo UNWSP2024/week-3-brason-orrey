@@ -1,32 +1,14 @@
-# Programming Excersize 3-13
+weight = float(input("Please Enter the weight of your package: "))
 
-# The Fast Freight Shipping Company charges the following rates:
+if weight <= 2:
+    price_per_pound = 1.50
+elif weight > 2 and weight <= 6:
+    price_per_pound = 3.00
+elif weight > 6 and weight <= 10:
+    price_per_pound = 4.00
+else:
+    price_per_pound = 4.75
 
-# Weight    	Price Per Pound
-# 2 pounds or less   	$1.50
-# Over 2 pounds but not more than 6 pounds  	$3.00
-# Over 6 pounds but not more than 10 pounds	$4.00
-# Over 10 pounds	$4.75
-# Write a program which calculates the shipping charge and displays the total.
+total_shipping_cost = weight * price_per_pound
 
-def weight_conversion(weight):
-    # Calculate the shipping charge.
-    shippingCost = 0.0
-    ######################
-    # WRITE YOUR CODE HERE
-    ######################
-    
-    return shippingCost
-
-#### This piece of the code has been done for you,
-#### you only need to worry about the actual shipping 
-#### charge logic in the weight_conversion function
-if __name__ == '__main__':
-    # Local variables
-    weight = 0.0
-    shippingCost = 0.0
-    # Get package weight from the user.
-    weight = float(input('Enter the weight of the package: '))
-    # Display the shipping charge.
-    shippingCost = weight_conversion(weight)
-    print ('Shipping charge: $', format(shippingCost, '.2f'))
+print(f"The total shipping charge is: ${total_shipping_cost:.2f}")
