@@ -1,3 +1,5 @@
+#Brason Orrey - Hot Dog Stand Calculator
+
 hot_dog_price = 3.50
 chili_dog_price = 4.50
 
